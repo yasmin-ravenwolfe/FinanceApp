@@ -1,0 +1,7 @@
+<% if @user.groups.size > 0 %>
+  <% @user.groups.each do |group| %>
+    <%= link_to '#{group.name}', group_url %>
+  <% end %>
+<% end %>
+
+<%= link_to "New purchase", new_purchase_url %>
