@@ -1,8 +1,6 @@
 class Purchase < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :group
-
-  # attr_accessor :description
+  has_many :receipts
+  has_many :users, through: :receipts
 
   validates :description, presence: true
 end

@@ -1,4 +1,6 @@
 class Group < ActiveRecord::Base
-  has_many :users
-  has_many :purchases, through: :users
+  has_many :memberships
+  has_many :users, through: :memberships
+
+  # add user_id
 end

@@ -1,7 +1,10 @@
 <% if @user.groups.size > 0 %>
   <% @user.groups.each do |group| %>
-    <%= link_to '#{group.name}', group_url %>
+    <%= link_to "#{group.name}", group_url(group.id) %>
   <% end %>
 <% end %>
 
-<%= link_to "New purchase", new_purchase_url %>
+<%= link_to 'New Group', new_group_url %>
+<%#= link_to "New purchase", new_purchase_url %>
+
+<%= render :partial => 'static_pages/new_purchase_form' %>

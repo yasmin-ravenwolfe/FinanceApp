@@ -13,6 +13,8 @@ FinanceApp::Application.routes.draw do
 
   resources :purchase
 
+  resources :membership
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
